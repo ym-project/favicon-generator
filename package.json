@@ -17,7 +17,13 @@
   "homepage": "https://github.com/ym-project/favicon-generator#readme",
   "bugs": "https://github.com/ym-project/favicon-generator/issues",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "clean": "scripts/clean dist",
+    "build": "scripts/build dist",
+    "test": "ava",
+    "lint": "eslint '**/*.{ts,js,mjs}'",
+    "check-types": "tsc --noEmit"
+  },
   "dependencies": {
     "sharp": "^0.27.2"
   },
