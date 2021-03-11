@@ -1,0 +1,23 @@
+{
+  "name": "favicon-generator",
+  "version": "0.0.0",
+  "description": "favicon generator",
+  "keywords": [
+    "favicon"
+  ],
+  "author": {
+    "name": "ym-project",
+    "email": "ym-project@protonmail.com",
+    "url": "https://github.com/ym-project"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ym-project/favicon-generator"
+  },
+  "homepage": "https://github.com/ym-project/favicon-generator#readme",
+  "bugs": "https://github.com/ym-project/favicon-generator/issues",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
