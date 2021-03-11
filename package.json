@@ -18,8 +18,8 @@
   "bugs": "https://github.com/ym-project/favicon-generator/issues",
   "license": "MIT",
   "scripts": {
-    "clean": "scripts/clean dist",
-    "build": "scripts/build dist",
+    "clean": "node scripts/clean",
+    "build": "node scripts/build",
     "test": "ava",
     "lint": "eslint '**/*.{ts,js,mjs}'",
     "check-types": "tsc --noEmit"
