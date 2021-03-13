@@ -17,6 +17,11 @@
   "homepage": "https://github.com/ym-project/favicon-generator#readme",
   "bugs": "https://github.com/ym-project/favicon-generator/issues",
   "license": "MIT",
+  "main": "dist/cjs.js",
+  "exports": {
+    "require": "./dist/cjs.js",
+    "import": "./dist/esm.mjs"
+  },
   "scripts": {
     "clean": "node scripts/clean",
     "build": "node scripts/build",
