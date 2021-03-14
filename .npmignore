@@ -1,0 +1,8 @@
+scripts
+src
+test
+.eslintignore
+.eslintrc.js
+commitlint.config.js
+husky.config.js
+tsconfig.json
