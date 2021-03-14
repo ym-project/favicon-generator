@@ -8,7 +8,7 @@ Supported output file formats: `JPEG`, `PNG`, `WebP`, `AVIF`, `TIFF`
 
 ## Example
 ```js
-const {faviconGenerator} = reqiure('favicon-generator')
+const {faviconGenerator} = require('favicon-generator')
 const fs = require('fs/promises')
 
 faviconGenerator('./favicon.png', [
