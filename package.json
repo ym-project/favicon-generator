@@ -18,6 +18,7 @@
   "bugs": "https://github.com/ym-project/favicon-generator/issues",
   "license": "MIT",
   "main": "dist/cjs.js",
+  "types": "index.d.ts",
   "exports": {
     "require": "./dist/cjs.js",
     "import": "./dist/esm.mjs"
