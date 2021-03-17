@@ -31,7 +31,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "png-to-ico": "github:ym-project/png-to-ico#main",
+    "jimp": "^0.16.1",
     "sharp": "^0.27.2"
   },
   "devDependencies": {
