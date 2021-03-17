@@ -1,4 +1,5 @@
 import sharp from 'sharp'
+import pngToIco from 'png-to-ico'
 import type {
 	InputFavicon,
 	OutputFavicon,
@@ -67,9 +68,28 @@ async function transformFavicon(favicon: InputFavicon, src: SourceOptions): Prom
 	}
 
 
-	const buffer = await sh
-		.toFormat(format)
-		.toBuffer()
+	let buffer
+
+	if (format === 'ico') {
+		let pngBuffer
+
+		// we support only png -> ico
+		// so any non-png format should be transformed to png format
+		// and then to ico
+		if (src.format !== 'png') {
+			pngBuffer = await sh
+				.toFormat('png')
+				.toBuffer()
+		} else {
+			pngBuffer = await sh.toBuffer()
+		}
+
+		buffer = await pngToIco(pngBuffer)
+	} else {
+		buffer = await sh
+			.toFormat(format)
+			.toBuffer()
+	}
 
 	return {
 		buffer,
