@@ -1,11 +1,11 @@
 import sharp from 'sharp'
-import pngToIco from 'png-to-ico'
+import {pngToIco} from './png-to-ico'
 import type {
 	InputFavicon,
 	OutputFavicon,
 	SourceOptions,
 	InputFile,
-	SharpFormat,
+	Format,
 } from './types'
 
 function percentToPx(percent: number, maxValue: number): number {
@@ -17,7 +17,7 @@ async function faviconGenerator(src: InputFile, faviconList: InputFavicon[]): Pr
 	const meta = await sharp(src).metadata()
 	const source: SourceOptions = {
 		file: src,
-		format: meta.format as SharpFormat,
+		format: meta.format,
 	}
 
 	for (const favicon of faviconList) {
@@ -43,7 +43,7 @@ async function transformFavicon(favicon: InputFavicon, src: SourceOptions): Prom
 
 
 	// format
-	const format = favicon.format || src.format
+	const format = (favicon.format || src.format) as Format
 
 
 	// radius
