@@ -21,6 +21,8 @@ module.exports = {
 				'style',
 				// change README
 				'docs',
+				// add feature
+				'feat',
 			],
 		],
 	},
