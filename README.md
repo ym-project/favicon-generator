@@ -4,7 +4,7 @@ NodeJS library for favicon generation.
 
 Supported input file formats: `JPEG`, `PNG`, `WebP`, `AVIF`, `TIFF`, `GIF`, `SVG`
 
-Supported output file formats: `JPEG`, `PNG`, `WebP`, `AVIF`, `TIFF`
+Supported output file formats: `JPEG`, `PNG`, `WebP`, `AVIF`, `TIFF`, `ICO`
 
 ## Example
 ```js
