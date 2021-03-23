@@ -1,15 +1,11 @@
-import type {
-	FormatEnum,
-	AvailableFormatInfo,
-} from 'sharp'
+import type {FormatEnum} from 'sharp'
 
-export type SharpFormat = keyof FormatEnum | AvailableFormatInfo
 export type InputFile = string | Buffer
 
 export interface InputFavicon {
 	width?: number
 	height?: number
-	format?: SharpFormat
+	format?: Format
 	radius?: number
 }
 
@@ -17,7 +13,7 @@ export interface OutputFavicon {
 	buffer: Buffer
 	width: number
 	height: number
-	format: SharpFormat
+	format: Format
 	radius?: number
 	xRadius?: number
 	yRadius?: number
@@ -25,5 +21,12 @@ export interface OutputFavicon {
 
 export interface SourceOptions {
 	file: InputFile
-	format: SharpFormat
+	format: keyof FormatEnum | undefined
 }
+
+export type Format = 'jpeg'
+	| 'png'
+	| 'webp'
+	| 'avif'
+	| 'tiff'
+	| 'ico'
