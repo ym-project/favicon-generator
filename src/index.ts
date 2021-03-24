@@ -43,7 +43,8 @@ async function transformFavicon(favicon: InputFavicon, src: SourceOptions): Prom
 
 
 	// format
-	const format = (favicon.format || src.format) as Format
+	const format = ((favicon.format && favicon.format.toLowerCase())
+		|| (src.format && src.format.toLowerCase())) as Format
 
 
 	// radius
